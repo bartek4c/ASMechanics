@@ -1,0 +1,20 @@
+2014-12-10 00:52:02,092 [73] INFO  umbraco.BusinessLogic.Log - [Thread 44] Log scrubbed.  Removed all items older than 2014-10-11 00:52:02
+2014-12-10 19:43:35,591 [73] ERROR umbraco.DataLayer.SqlHelper`1[[System.Data.SqlClient.SqlParameter, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]] - [Thread 94] Error executing query delete from umbracoLog where datestamp < @oldestPermittedLogEntry and logHeader in ('open','system')
+System.Data.SqlClient.SqlException (0x80131904): SHUTDOWN is in progress.
+Login failed for user 'asmechanics'.
+A severe error occurred on the current command.  The results, if any, should be discarded.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlConnection connection, CommandType commandType, String commandText, SqlParameter[] commandParameters)
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters)
+   at umbraco.DataLayer.SqlHelpers.SqlServer.SqlServerHelper.ExecuteNonQuery(String commandText, SqlParameter[] parameters)
+   at umbraco.DataLayer.SqlHelper`1.ExecuteNonQuery(String commandText, IParameter[] parameters)
+ClientConnectionId:678c3501-fdd7-4459-a598-0b54c774a215
+2014-12-10 19:43:36,388 [73] INFO  Umbraco.Core.UmbracoApplicationBase - [Thread 94] Application shutdown. Reason: ConfigurationChange
