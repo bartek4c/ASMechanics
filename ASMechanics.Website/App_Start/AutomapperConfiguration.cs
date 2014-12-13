@@ -18,7 +18,7 @@ namespace ASMechanics.Website.App_Start
             /// Get all classes which inherit from Profile class, which is used to register type converters
             List<Profile> profiles = AppDomain.CurrentDomain.GetAssemblies()
                 .SelectMany(p => p.GetTypes())
-                .Where(c => typeof(Profile).IsAssignableFrom(c) && typeof(Profile) != c && !c.IsAbstract && c != null)
+                .Where(c => typeof(Profile).IsAssignableFrom(c) && typeof(Profile) != c && !c.IsAbstract)
                 .Select(fp => Activator.CreateInstance(fp) as Profile)
                 .ToList();
 
