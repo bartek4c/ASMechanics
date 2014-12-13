@@ -245,7 +245,6 @@
   <ItemGroup>
     <Compile Include="App_Start\AutomapperConfiguration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\TagsPropertyEditorValueConverter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -282,7 +281,6 @@
     <Content Include="css\dummy.txt" />
     <Content Include="default.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="X_Global.asax" />
     <Content Include="install\default.aspx" />
     <Content Include="install\InstallerRestService.aspx" />
     <Content Include="install\Steps\database.ascx" />

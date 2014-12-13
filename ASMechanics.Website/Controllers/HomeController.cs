@@ -38,20 +38,6 @@ namespace ASMechanics.Website.Controllers
             var vm = new HomeViewModel(model.Content.GetProperty("mainHeading").Value.ToString(),
                 model.Content.GetProperty("mainContent").Value.ToString());
 
-            TagsPropertyEditorValueConverter converter = new TagsPropertyEditorValueConverter();
-
-            var test1 = model.Content.GetProperty("tags");
-
-            if (converter.IsConverterFor(test1.Alias))
-            {
-                vm.Tags = converter.ConvertPropertyValue(test1.Value);
-            }
-
-            var type = test1.GetType();
-
-            //converter.IsConverterFor(test1..)
-
-
             var testString = Mapper.Map<int, string>(5);
 
             var test2 = model.Content.GetProperty("tags").Value;

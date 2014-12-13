@@ -54,6 +54,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Binders\" />
+    <Folder Include="Models\Components\" />
+    <Folder Include="Models\Enums\" />
+    <Folder Include="Models\Pages\" />
+    <Folder Include="Models\Partials\" />
+    <Folder Include="TypeConverters\Profiles\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\AutoMapper.3.3.0\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.3.0\tools\AutoMapper.targets')" />
