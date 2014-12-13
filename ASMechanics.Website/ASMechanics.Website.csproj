@@ -40,6 +40,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=3.3.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AutoMapper.3.3.0\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4, Version=3.3.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AutoMapper.3.3.0\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
     <Reference Include="businesslogic">
       <HintPath>..\packages\UmbracoCms.Core.6.1.6\lib\businesslogic.dll</HintPath>
     </Reference>
@@ -235,8 +243,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\AutomapperConfiguration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TagsPropertyEditorValueConverter.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="Models\HomeViewModel.cs" />
     <Compile Include="Models\ViewModelBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -269,6 +281,8 @@
     <Content Include="bin\x86\sqlcese40.dll" />
     <Content Include="css\dummy.txt" />
     <Content Include="default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="X_Global.asax" />
     <Content Include="install\default.aspx" />
     <Content Include="install\InstallerRestService.aspx" />
     <Content Include="install\Steps\database.ascx" />
@@ -361,6 +375,7 @@
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="..\packages\UmbracoCms.6.1.6\build\net45\UmbracoCms.targets" Condition="Exists('..\packages\UmbracoCms.6.1.6\build\net45\UmbracoCms.targets')" />
+  <Import Project="..\packages\AutoMapper.3.3.0\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.3.0\tools\AutoMapper.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

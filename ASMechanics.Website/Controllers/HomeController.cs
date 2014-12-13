@@ -1,4 +1,5 @@
 ﻿using ASMechanics.Website.Models;
+using AutoMapper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -50,7 +51,9 @@ namespace ASMechanics.Website.Controllers
 
             //converter.IsConverterFor(test1..)
 
-            
+
+            var testString = Mapper.Map<int, string>(5);
+
             var test2 = model.Content.GetProperty("tags").Value;
 
             Test<HomeViewModel>();

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ASMechanics.Core")]
+[assembly: AssemblyTitle("ASMechanics.Websites.Core")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ASMechanics.Core")]
+[assembly: AssemblyProduct("ASMechanics.Websites.Core")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("cdf81afc-df84-46d4-a829-803c41e18752")]
+[assembly: Guid("ee588d90-1df9-463a-930c-ac4a8d499444")]
 
 // Version information for an assembly consists of the following four values:
 //
