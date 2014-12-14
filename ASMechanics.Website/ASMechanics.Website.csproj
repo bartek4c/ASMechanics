@@ -248,8 +248,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\HomeViewModel.cs" />
-    <Compile Include="Models\ViewModelBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -343,6 +341,12 @@
   <ItemGroup>
     <Folder Include="Views\MacroPartials\" />
     <Folder Include="Views\Partials\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ASMechanics.Websites.Core\ASMechanics.Websites.Core.csproj">
+      <Project>{993e99c8-b3a1-4ebb-83d6-a827adf46d84}</Project>
+      <Name>ASMechanics.Websites.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

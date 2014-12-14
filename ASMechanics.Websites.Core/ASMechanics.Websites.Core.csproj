@@ -45,6 +45,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Components\Interfaces\ISidePageComponent.cs" />
+    <Compile Include="Models\Components\Interfaces\ITopPageComponent.cs" />
+    <Compile Include="Models\Components\TopBannerComponent.cs" />
+    <Compile Include="Models\Components\TopPageComponent.cs" />
+    <Compile Include="Models\Core\ImageVm.cs" />
+    <Compile Include="Models\Core\LinkVm.cs" />
+    <Compile Include="Models\Pages\Base\BasePageVm.cs" />
+    <Compile Include="Models\Pages\ErrorPageVm.cs" />
+    <Compile Include="Models\Pages\StandardPageVm.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TypeConverters\IntToStringConverter.cs" />
     <Compile Include="TypeConverters\Profiles\TypeConvertersProfile.cs" />
@@ -54,9 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Binders\" />
-    <Folder Include="Models\Components\" />
     <Folder Include="Models\Enums\" />
-    <Folder Include="Models\Pages\" />
     <Folder Include="Models\Partials\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
