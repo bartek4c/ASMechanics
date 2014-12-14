@@ -1,5 +1,4 @@
 ﻿using ASMechanics.Websites.Core.Models.Pages;
-using AutoMapper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,20 +15,31 @@ using Umbraco.Web.Mvc;
 
 namespace ASMechanics.Website.Controllers
 {
-    public class HomeController : RenderMvcController
+    public class HomePageController : RenderMvcController
     {
         public ActionResult DefaultPage(RenderModel model)
         {
-            var testString = Mapper.Map<int, string>(5);
+            //automapper test
+            //var testString = Mapper.Map<int, string>(5);
 
-            var vm = new StandardPageVm() {
-                MainHeader = "Main Header",
-                SubHeader = "Sub Header"
-            };
+            var vm = new StandardPageVm();
+
+            foreach (var origProp in model.Content.Properties)
+            {
+                foreach (var targetProp in vm.GetType().GetProperties())
+                {
+                    if (origProp.Alias.ToLower() == targetProp.Name.ToLower())
+                    {
+                        if (targetProp.PropertyType == typeof(string))
+                        {
+                            targetProp.SetValue(vm, origProp.Value.ToString());
+                        }
+                    }
+                }
+            }
 
             return View("Home", vm);
         }
-
 
         #region redundant code
         /*

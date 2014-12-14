@@ -11,13 +11,13 @@ namespace ASMechanics.Websites.Core.Models.Pages
 {
     public class StandardPageVm : BasePageVm
     {
+        //Components tab in umbraco office
         public ITopPageComponent TopPageComponent { get; set; }
-        public bool HideTopPageComponent { get; set; }
         public List<ISidePageComponent> SidePageComponents { get; set; }
 
+        //Content tab in umbraco office
         public string MainHeader { get; set; }
         public string SubHeader { get; set; }
-
         public string ContentText { get; set; }
     }
 }

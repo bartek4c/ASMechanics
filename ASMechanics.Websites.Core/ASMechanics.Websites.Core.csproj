@@ -48,7 +48,7 @@
     <Compile Include="Models\Components\Interfaces\ISidePageComponent.cs" />
     <Compile Include="Models\Components\Interfaces\ITopPageComponent.cs" />
     <Compile Include="Models\Components\TopBannerComponent.cs" />
-    <Compile Include="Models\Components\TopPageComponent.cs" />
+    <Compile Include="Models\Components\ImageSliderComponent.cs" />
     <Compile Include="Models\Core\ImageVm.cs" />
     <Compile Include="Models\Core\LinkVm.cs" />
     <Compile Include="Models\Pages\Base\BasePageVm.cs" />
