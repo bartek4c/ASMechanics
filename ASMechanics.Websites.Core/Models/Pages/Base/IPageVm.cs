@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ASMechanics.Websites.Core.Models.Components.Interfaces
+namespace ASMechanics.Websites.Core.Models.Pages.Base
 {
-    public interface ISidePageComponent
+    public interface IPageVm
     {
     }
 }

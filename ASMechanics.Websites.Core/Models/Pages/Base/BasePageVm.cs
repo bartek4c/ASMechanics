@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ASMechanics.Websites.Core.Models.Pages.Base
 {
-    public abstract class BasePageVm
+    public abstract class BasePageVm : IPageVm
     {
         public ImageVm PageLogo { get; set; }
 
@@ -16,8 +16,6 @@ namespace ASMechanics.Websites.Core.Models.Pages.Base
 
         public string PageTitle { get; set; }
         public string MetadataDescription { get; set; }
-        public string MetadataKeywords { get; set; }
-
-         
+        public string MetadataKeywords { get; set; } 
     }
 }

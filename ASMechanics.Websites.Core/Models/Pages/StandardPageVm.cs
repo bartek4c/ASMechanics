@@ -1,5 +1,6 @@
 ﻿using ASMechanics.Websites.Core.Models.Components;
 using ASMechanics.Websites.Core.Models.Components.Interfaces;
+using ASMechanics.Websites.Core.Models.Core;
 using ASMechanics.Websites.Core.Models.Pages.Base;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,6 @@ namespace ASMechanics.Websites.Core.Models.Pages
         //Content tab in umbraco office
         public string MainHeader { get; set; }
         public string SubHeader { get; set; }
-        public string ContentText { get; set; }
+        public HtmlText ContentText { get; set; }
     }
 }

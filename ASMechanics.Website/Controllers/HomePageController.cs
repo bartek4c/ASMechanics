@@ -1,4 +1,5 @@
-﻿using ASMechanics.Websites.Core.Models.Pages;
+﻿using ASMechanics.Websites.Core.Binders;
+using ASMechanics.Websites.Core.Models.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,13 @@ namespace ASMechanics.Website.Controllers
 {
     public class HomePageController : RenderMvcController
     {
+        private IBinder _binder;
+
+        public HomePageController()
+        {
+            _binder = new Binder();
+        }
+
         public ActionResult DefaultPage(RenderModel model)
         {
             //automapper test
@@ -24,19 +32,7 @@ namespace ASMechanics.Website.Controllers
 
             var vm = new StandardPageVm();
 
-            foreach (var origProp in model.Content.Properties)
-            {
-                foreach (var targetProp in vm.GetType().GetProperties())
-                {
-                    if (origProp.Alias.ToLower() == targetProp.Name.ToLower())
-                    {
-                        if (targetProp.PropertyType == typeof(string))
-                        {
-                            targetProp.SetValue(vm, origProp.Value.ToString());
-                        }
-                    }
-                }
-            }
+            _binder.Bind(model.Content, vm);
 
             return View("Home", vm);
         }

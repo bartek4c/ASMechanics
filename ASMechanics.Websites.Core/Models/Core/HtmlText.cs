@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ASMechanics.Websites.Core.Models.Components.Interfaces
+namespace ASMechanics.Websites.Core.Models.Core
 {
-    public interface ISidePageComponent
+    public class HtmlText
     {
+        public string Content { get; set; }
     }
 }
