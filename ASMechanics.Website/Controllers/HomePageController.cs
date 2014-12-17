@@ -1,5 +1,6 @@
-﻿using ASMechanics.Websites.Core.Binders;
-using ASMechanics.Websites.Core.Models.Pages;
+﻿using ASMechanics.Website.Core.Binders;
+using ASMechanics.Website.Core.Binders.Core;
+using ASMechanics.Website.Core.Models.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,19 +19,15 @@ namespace ASMechanics.Website.Controllers
 {
     public class HomePageController : RenderMvcController
     {
-        private IBinder _binder;
-
         public HomePageController()
-        {
-            _binder = new Binder();
+        {    
         }
 
         public ActionResult DefaultPage(RenderModel model)
         {
-            //automapper test
-            //var testString = Mapper.Map<int, string>(5);
-
             var vm = new StandardPageVm();
+
+            var _binder = new StandardPageBinder();
 
             _binder.Bind(model.Content, vm);
 

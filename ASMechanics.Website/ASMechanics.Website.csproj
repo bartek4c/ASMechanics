@@ -343,9 +343,9 @@
     <Folder Include="Views\Partials\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ASMechanics.Websites.Core\ASMechanics.Websites.Core.csproj">
+    <ProjectReference Include="..\ASMechanics.Website.Core\ASMechanics.Website.Core.csproj">
       <Project>{993e99c8-b3a1-4ebb-83d6-a827adf46d84}</Project>
-      <Name>ASMechanics.Websites.Core</Name>
+      <Name>ASMechanics.Website.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

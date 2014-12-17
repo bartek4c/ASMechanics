@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASMechanics.Website", "ASMe
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{00D09E5B-6F20-45C1-B8A5-BB9F2DC7C7A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASMechanics.Websites.Core", "ASMechanics.Websites.Core\ASMechanics.Websites.Core.csproj", "{993E99C8-B3A1-4EBB-83D6-A827ADF46D84}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASMechanics.Website.Core", "ASMechanics.Website.Core\ASMechanics.Website.Core.csproj", "{993E99C8-B3A1-4EBB-83D6-A827ADF46D84}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
