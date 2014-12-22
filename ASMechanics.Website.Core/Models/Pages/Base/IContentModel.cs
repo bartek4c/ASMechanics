@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ASMechanics.Website.Core.Models.Pages.Base
 {
-    public interface IPageVm
+    public interface IContentModel
     {
     }
 }

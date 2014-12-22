@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ASMechanics.Website.Core.Models.Pages.Base
 {
-    public abstract class BasePageVm : IPageVm
+    public abstract class BasePageVm : IContentModel
     {
         public List<LinkVm> MainMenu { get; set; }
         public bool DisplayMainMenu { get; set; }
