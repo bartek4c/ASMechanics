@@ -15,7 +15,6 @@ namespace ASMechanics.Website.Core.TypeConverters.Generic
         public IContentModel Convert(ResolutionContext context)
         {
             //to verified in details
-
             var destinationModel = context.DestinationValue;
 
             if (destinationModel == null)
@@ -42,13 +41,9 @@ namespace ASMechanics.Website.Core.TypeConverters.Generic
                     {
                         prop.SetValue(destinationModel, umbracoProperty.Value.ToString());
                     }
-                    if (prop.PropertyType == typeof(HtmlText))
+                    if (prop.PropertyType == typeof(HtmlTextVm))
                     {
-                        prop.SetValue(destinationModel, Mapper.Map<string, HtmlText>(umbracoProperty.Value.ToString()));
-                    }
-                    if (prop.PropertyType == typeof(List<LinkVm>))
-                    {
-                        prop.SetValue(destinationModel, Mapper.Map<string, List<LinkVm>>(umbracoProperty.Value.ToString()));
+                        prop.SetValue(destinationModel, Mapper.Map<string, HtmlTextVm>(umbracoProperty.Value.ToString()));
                     }
                 }
             }

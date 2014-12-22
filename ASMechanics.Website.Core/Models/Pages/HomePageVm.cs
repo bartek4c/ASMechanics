@@ -10,15 +10,12 @@ using System.Threading.Tasks;
 
 namespace ASMechanics.Website.Core.Models.Pages
 {
-    public class StandardPageVm : BasePageVm
+    public class HomePageVm : BasePageVm
     {
-        //Components tab in umbraco office
-        public ITopPageComponent TopPageComponent { get; set; }
-        public List<ISidePageComponent> SidePageComponents { get; set; }
+        public List<ImageSliderVm> ImageSlider { get; set; }
 
-        //Content tab in umbraco office
         public string MainHeader { get; set; }
         public string SubHeader { get; set; }
-        public HtmlText ContentText { get; set; }
+        public HtmlTextVm ContentText { get; set; }
     }
 }

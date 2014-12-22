@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace ASMechanics.Website.Core.TypeConverters
 {
-    public class StringToHtmlTextConverter : ITypeConverter<string, HtmlText>
+    public class StringToHtmlTextConverter : ITypeConverter<string, HtmlTextVm>
     {
-        public HtmlText Convert(ResolutionContext context)
+        public HtmlTextVm Convert(ResolutionContext context)
         {
-            return new HtmlText() {
+            return new HtmlTextVm() {
                 Content = context.SourceValue.ToString()
             };
         }

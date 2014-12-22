@@ -43,32 +43,40 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="umbraco">
+      <HintPath>..\packages\UmbracoCms.Core.6.1.6\lib\umbraco.dll</HintPath>
+    </Reference>
     <Reference Include="Umbraco.Core">
       <HintPath>..\packages\UmbracoCms.Core.6.1.6\lib\Umbraco.Core.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Binders\Core\AbstractBinder.cs" />
-    <Compile Include="Binders\StandardPageBinder.cs" />
     <Compile Include="Binders\Core\BinderManager.cs" />
     <Compile Include="Binders\Core\IBinder.cs" />
     <Compile Include="Binders\Core\IBinderManager.cs" />
+    <Compile Include="Binders\HomePageBinder.cs" />
+    <Compile Include="Binders\TemplatePageBinder.cs" />
     <Compile Include="Models\Components\Interfaces\ISidePageComponent.cs" />
     <Compile Include="Models\Components\Interfaces\ITopPageComponent.cs" />
     <Compile Include="Models\Components\TopBannerComponent.cs" />
     <Compile Include="Models\Components\ImageSliderComponent.cs" />
-    <Compile Include="Models\Core\HtmlText.cs" />
+    <Compile Include="Models\Core\HtmlTextVm.cs" />
+    <Compile Include="Models\Core\ImageSliderVm.cs" />
     <Compile Include="Models\Core\ImageVm.cs" />
     <Compile Include="Models\Core\LinkVm.cs" />
     <Compile Include="Models\Pages\Base\BasePageVm.cs" />
     <Compile Include="Models\Pages\Base\IContentModel.cs" />
     <Compile Include="Models\Pages\ErrorPageVm.cs" />
-    <Compile Include="Models\Pages\StandardPageVm.cs" />
+    <Compile Include="Models\Pages\HomePageVm.cs" />
+    <Compile Include="Models\Pages\TemplatePageVm.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TypeConverters\Generic\GenericModelTypeConverter.cs" />
     <Compile Include="TypeConverters\StringToListOfLinkVmConverter.cs" />
     <Compile Include="TypeConverters\Profiles\TypeConvertersProfile.cs" />
     <Compile Include="TypeConverters\StringToHtmlTextConverter.cs" />
+    <Compile Include="UmbracoServices\IUmbracoService.cs" />
+    <Compile Include="UmbracoServices\UmbracoService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

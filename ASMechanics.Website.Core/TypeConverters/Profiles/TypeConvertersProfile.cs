@@ -8,7 +8,7 @@ namespace ASMechanics.Website.Core.TypeConverters.Profiles
     {
         protected override void Configure()
         {
-            Mapper.CreateMap<string, HtmlText>().ConvertUsing(new StringToHtmlTextConverter());
+            Mapper.CreateMap<string, HtmlTextVm>().ConvertUsing(new StringToHtmlTextConverter());
             Mapper.CreateMap<string, List<LinkVm>>().ConvertUsing(new StringToListOfLinkVmConverter());
         }
     }

@@ -27,8 +27,7 @@ namespace ASMechanics.Website.App_Start
 
             // Initialize AutoMapper with each instance of the profile found.
             Mapper.Initialize(a => profiles.ForEach(a.AddProfile));
-
-
+            
             // Automatic Umbraco Model Converter
             var modelType = typeof(IContentModel);
 

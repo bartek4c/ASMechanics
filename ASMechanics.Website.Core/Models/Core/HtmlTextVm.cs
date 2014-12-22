@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ASMechanics.Website.Core.Models.Core
 {
-    public class HtmlText
+    public class HtmlTextVm
     {
         public string Content { get; set; }
     }

@@ -6,7 +6,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using umbraco.cms.businesslogic.web;
 using umbraco.NodeFactory;
 using Umbraco.Core.Models;
 using Umbraco.Core.PropertyEditors;
@@ -19,16 +18,16 @@ namespace ASMechanics.Website.Controllers
 {
     public class HomePageController : RenderMvcController
     {
+        private IBinder _binder;
+
         public HomePageController()
-        {    
+        {
+            _binder = new HomePageBinder();
         }
 
         public ActionResult DefaultPage(RenderModel model)
         {
-            var vm = new StandardPageVm();
-
-            var _binder = new StandardPageBinder();
-
+            var vm = new HomePageVm();
             _binder.Bind(model.Content, vm);
 
             return View("Home", vm);

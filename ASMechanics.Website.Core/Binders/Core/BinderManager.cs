@@ -12,10 +12,11 @@ namespace ASMechanics.Website.Core.Binders.Core
     {
         private IList<IBinder> _binders { get; set; }
 
-        public BinderManager(IList<IBinder> binders)
+        public BinderManager()
         {
+            //temporarily
             _binders = new List<IBinder>();
-            _binders.Add(new StandardPageBinder());
+            _binders.Add(new HomePageBinder());
         }
 
         public void Bind(IPublishedContent model, object viewModel)
