@@ -245,6 +245,7 @@
   <ItemGroup>
     <Compile Include="App_Start\AutomapperConfiguration.cs" />
     <Compile Include="Controllers\HomePageController.cs" />
+    <Compile Include="Controllers\TemplatePageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -330,6 +331,7 @@
     <Content Include="bin\amd64\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest" />
     <Content Include="Views\Home.cshtml" />
     <Content Include="Views\Master.cshtml" />
+    <Content Include="Views\AboutUs.cshtml" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>

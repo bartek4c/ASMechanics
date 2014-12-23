@@ -10,7 +10,7 @@ namespace ASMechanics.Website.Core.Binders.Core
 {
     public interface IBinder
     {
-        void Bind(IPublishedContent model, object viewModel);
+        IContentModel Bind(IPublishedContent model);
         bool CanHandle(Type modelType);
         IEnumerable<Type> AcceptedTypes { get; }
     }
