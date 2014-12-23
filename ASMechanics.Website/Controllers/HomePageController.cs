@@ -27,9 +27,7 @@ namespace ASMechanics.Website.Controllers
 
         public ActionResult DefaultPage(RenderModel model)
         {
-            var vm = new HomePageVm();
-            _binder.Bind(model.Content, vm);
-
+            var vm = _binder.Bind(model.Content);
             return View("Home", vm);
         }
 

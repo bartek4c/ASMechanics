@@ -5,17 +5,18 @@ using System.Text;
 using System.Threading.Tasks;
 using ASMechanics.Website.Core.Binders.Core;
 using ASMechanics.Website.Core.Models.Pages;
-using ASMechanics.Website.Core.UmbracoServices;
 using Umbraco.Core.Models;
+using Umbraco.Web;
+using AutoMapper;
+using ASMechanics.Website.Core.Models.Pages.Base;
 
 namespace ASMechanics.Website.Core.Binders
 {
     public class HomePageBinder : AbstractBinder
     {
-        public override void Bind(IPublishedContent model, object viewModel)
+        public override IContentModel Bind(IPublishedContent model)
         {
-            var basePageModel = (HomePageVm)viewModel;
-            basePageModel.UmbracoService = new UmbracoService();
+            return Mapper.Map<HomePageVm>(model);
         }
 
         public override IEnumerable<Type> AcceptedTypes

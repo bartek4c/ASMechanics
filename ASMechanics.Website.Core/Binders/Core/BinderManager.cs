@@ -21,13 +21,13 @@ namespace ASMechanics.Website.Core.Binders.Core
 
         public void Bind(IPublishedContent model, object viewModel)
         {
-            Mapper.Map(model, viewModel);
+            //Mapper.Map(model, viewModel);
 
             foreach (var binder in _binders)
             {
                 if (binder.CanHandle(viewModel.GetType()))
                 {
-                    binder.Bind(model, viewModel);
+                    binder.Bind(model);
                 }
             }
         }
