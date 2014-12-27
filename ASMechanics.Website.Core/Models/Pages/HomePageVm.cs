@@ -1,12 +1,6 @@
-﻿using ASMechanics.Website.Core.Models.Components;
-using ASMechanics.Website.Core.Models.Components.Interfaces;
-using ASMechanics.Website.Core.Models.Core;
+﻿using ASMechanics.Website.Core.Models.Core;
 using ASMechanics.Website.Core.Models.Pages.Base;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ASMechanics.Website.Core.Models.Pages
 {
