@@ -1,0 +1,13 @@
+﻿@model IEnumerable<ASMechanics.Website.Core.Models.Core.LinkVm>
+
+<ul>
+    @foreach (var l in Model)
+    { 
+        <li>
+            @*Looks like cannot be used because umbraco is handling all the routes
+            @Html.ActionLink("Here", "DefaultPage", "HomePage")*@
+
+            <a href="@l.Url">@l.Title</a>
+        </li>
+    }
+</ul>

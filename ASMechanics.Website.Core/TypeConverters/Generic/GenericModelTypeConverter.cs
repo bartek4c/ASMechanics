@@ -43,6 +43,10 @@ namespace ASMechanics.Website.Core.TypeConverters.Generic
                     {
                         prop.SetValue(destinationModel, Mapper.Map<string, HtmlTextVm>(umbracoProperty.Value.ToString()));
                     }
+                    if (prop.PropertyType == typeof(List<LinkVm>))
+                    {
+                        prop.SetValue(destinationModel, Mapper.Map<string, List<LinkVm>>(umbracoProperty.Value.ToString()));
+                    }
                 }
             }
 

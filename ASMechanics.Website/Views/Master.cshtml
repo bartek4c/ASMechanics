@@ -3,10 +3,39 @@
 <head>
     <meta charset="utf-8">
     <title></title>
+
+    <style type="text/css">
+        body {
+            width: 900px;
+            margin: 0 auto;
+            font-family: 'Arial Narrow', 'Nimbus Sans L', sans-serif;
+            font-size: .8em;
+        }
+        .mainMenu {
+            background: lightgrey;
+            padding: 15px;
+            padding-left: 5px;
+        }
+        ul {
+            list-style-type: none;
+            margin-top: 0px;
+            margin-left: -10px;
+        }
+        li {
+            float: left;
+            margin-right: 25px;
+        }
+    </style>
 </head>
 
 <body>
 
+    <div class="mainMenu">
+        @Html.Action("MainMenu", "MainMenu", null)
+
+        <div style="clear: both"></div>
+    </div>
+    
     <h2>Content:</h2>
 
     <div>

@@ -244,7 +244,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\AutomapperConfiguration.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomePageController.cs" />
+    <Compile Include="Controllers\MainMenuController.cs" />
     <Compile Include="Controllers\TemplatePageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -332,6 +334,8 @@
     <Content Include="Views\Home.cshtml" />
     <Content Include="Views\Master.cshtml" />
     <Content Include="Views\AboutUs.cshtml" />
+    <Content Include="Views\Services.cshtml" />
+    <Content Include="Views\MainMenu\MainMenu.cshtml" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>

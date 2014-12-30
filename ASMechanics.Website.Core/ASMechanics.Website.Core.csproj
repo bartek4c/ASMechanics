@@ -56,6 +56,7 @@
     <Compile Include="Binders\Core\IBinder.cs" />
     <Compile Include="Binders\Core\IBinderManager.cs" />
     <Compile Include="Binders\HomePageBinder.cs" />
+    <Compile Include="Binders\MainMenuBinder.cs" />
     <Compile Include="Binders\TemplatePageBinder.cs" />
     <Compile Include="Models\Components\Interfaces\ISidePageComponent.cs" />
     <Compile Include="Models\Components\Interfaces\ITopPageComponent.cs" />
@@ -67,6 +68,7 @@
     <Compile Include="Models\Core\LinkVm.cs" />
     <Compile Include="Models\Pages\Base\BasePageVm.cs" />
     <Compile Include="Models\Pages\Base\IContentModel.cs" />
+    <Compile Include="Models\Pages\Base\MainMenuVm.cs" />
     <Compile Include="Models\Pages\ErrorPageVm.cs" />
     <Compile Include="Models\Pages\HomePageVm.cs" />
     <Compile Include="Models\Pages\TemplatePageVm.cs" />

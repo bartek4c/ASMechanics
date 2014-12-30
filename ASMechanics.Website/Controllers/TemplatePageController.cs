@@ -18,7 +18,7 @@ namespace ASMechanics.Website.Controllers
         public ActionResult DefaultPage(RenderModel model)
         {
             var vm = _binder.Bind(model.Content);
-            return View("AboutUs", vm);
+            return View(model.Content.Name.Replace(" ", ""), vm);
         }
     }
 }
