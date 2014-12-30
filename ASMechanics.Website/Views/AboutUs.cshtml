@@ -7,3 +7,9 @@
 <h1>About us</h1>
 
 @Model.PageTitle
+
+@if (Model.PageContent != null)
+{ 
+    <h3>Content Text:</h3>
+    <p>@Html.Raw(Model.PageContent.Content)</p>
+}

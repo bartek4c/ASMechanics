@@ -11,6 +11,6 @@ namespace ASMechanics.Website.Core.Models.Pages
 
         public string MainHeader { get; set; }
         public string SubHeader { get; set; }
-        public HtmlTextVm ContentText { get; set; }
+        public HtmlTextVm PageContent { get; set; }
     }
 }
